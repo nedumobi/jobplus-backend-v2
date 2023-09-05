@@ -1,0 +1,67 @@
+{
+  "kind": "collectionType",
+  "collectionName": "jobs",
+  "info": {
+    "singularName": "job",
+    "pluralName": "jobs",
+    "displayName": "Job",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "job_title": {
+      "type": "string"
+    },
+    "job_description": {
+      "type": "richtext"
+    },
+    "salary": {
+      "type": "decimal"
+    },
+    "category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::category.category",
+      "inversedBy": "jobs"
+    },
+    "employer": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::employer.employer",
+      "inversedBy": "jobs"
+    },
+    "applications": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::application.application",
+      "mappedBy": "job"
+    },
+    "job_type": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::job-type.job-type",
+      "mappedBy": "job"
+    },
+    "save_jobs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::save-job.save-job",
+      "mappedBy": "job"
+    },
+    "notifications": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::notification.notification",
+      "mappedBy": "job"
+    },
+    "skills": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::skill.skill",
+      "mappedBy": "job"
+    }
+  }
+}

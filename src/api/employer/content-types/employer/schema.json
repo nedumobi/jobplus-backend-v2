@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "employers",
+  "info": {
+    "singularName": "employer",
+    "pluralName": "employers",
+    "displayName": "employer"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "company": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "logo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "contact_name": {
+      "type": "string"
+    },
+    "town": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "postcode": {
+      "type": "string"
+    },
+    "jobs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::job.job",
+      "mappedBy": "employer"
+    }
+  }
+}

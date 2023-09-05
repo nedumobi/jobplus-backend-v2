@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "save_jobs",
+  "info": {
+    "singularName": "save-job",
+    "pluralName": "save-jobs",
+    "displayName": "SaveJob"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "job": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::job.job",
+      "inversedBy": "save_jobs"
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "save_jobs"
+    }
+  }
+}
