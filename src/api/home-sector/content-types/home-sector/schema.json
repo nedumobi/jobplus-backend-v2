@@ -4,14 +4,15 @@
   "info": {
     "singularName": "home-sector",
     "pluralName": "home-sectors",
-    "displayName": "HomeSector"
+    "displayName": "HomeSector",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
-    "Title": {
+    "title": {
       "type": "string"
     },
     "subtitle": {

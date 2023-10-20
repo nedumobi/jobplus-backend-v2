@@ -15,16 +15,16 @@
     "title": {
       "type": "string"
     },
-    "sector": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::sector.sector",
-      "inversedBy": "categories"
-    },
     "job": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::job.job",
+      "inversedBy": "categories"
+    },
+    "sector": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::sector.sector",
       "inversedBy": "categories"
     }
   }
