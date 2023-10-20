@@ -38,12 +38,6 @@
     },
     "postcode": {
       "type": "string"
-    },
-    "jobs": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::job.job",
-      "mappedBy": "employer"
     }
   }
 }

@@ -21,29 +21,17 @@
     "salary": {
       "type": "decimal"
     },
-    "category": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::category.category",
-      "inversedBy": "jobs"
-    },
-    "employer": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::employer.employer",
-      "inversedBy": "jobs"
-    },
     "applications": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::application.application",
       "mappedBy": "job"
     },
-    "job_type": {
+    "job_types": {
       "type": "relation",
-      "relation": "oneToOne",
+      "relation": "manyToMany",
       "target": "api::job-type.job-type",
-      "mappedBy": "job"
+      "inversedBy": "jobs"
     },
     "save_jobs": {
       "type": "relation",
@@ -61,6 +49,25 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::skill.skill",
+      "mappedBy": "job"
+    },
+    "salarytype": {
+      "type": "enumeration",
+      "enum": [
+        "Negotiable",
+        "Fixed"
+      ]
+    },
+    "company": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::company.company",
+      "inversedBy": "jobs"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::category.category",
       "mappedBy": "job"
     }
   }

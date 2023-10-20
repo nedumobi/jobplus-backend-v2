@@ -4,33 +4,22 @@
   "info": {
     "singularName": "job-type",
     "pluralName": "job-types",
-    "displayName": "JobType"
+    "displayName": "JobType",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "job_type": {
-      "type": "enumeration",
-      "enum": [
-        "Permanent",
-        "Contract",
-        "Volunteer",
-        "Temporary"
-      ]
-    },
-    "job": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::job.job",
-      "inversedBy": "job_type"
-    },
-    "profiles": {
+    "jobs": {
       "type": "relation",
       "relation": "manyToMany",
-      "target": "api::profile.profile",
-      "inversedBy": "job_types"
+      "target": "api::job.job",
+      "mappedBy": "job_types"
+    },
+    "title": {
+      "type": "string"
     }
   }
 }

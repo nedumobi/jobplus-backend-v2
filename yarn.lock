@@ -1556,6 +1556,18 @@
     p-map "4.0.0"
     yup "0.32.9"
 
+"@strapi/utils@^4.0.0":
+  version "4.14.3"
+  resolved "https://registry.yarnpkg.com/@strapi/utils/-/utils-4.14.3.tgz#a068b1438e689d47ddc11dd2590c6c5cd6b592f6"
+  integrity sha512-b/r87o1mwcpayse9zMhejme7WBgmHsVjaF8+2fiJ/GZIab2pj934tFW9w+EfBbkd6mNKCdw/5nsHPDcSKVBHEA==
+  dependencies:
+    "@sindresorhus/slugify" "1.1.0"
+    date-fns "2.30.0"
+    http-errors "1.8.1"
+    lodash "4.17.21"
+    p-map "4.0.0"
+    yup "0.32.9"
+
 "@swc/helpers@^0.5.0":
   version "0.5.1"
   resolved "https://registry.yarnpkg.com/@swc/helpers/-/helpers-0.5.1.tgz#e9031491aa3f26bfcc974a67f48bd456c8a5357a"
@@ -2319,6 +2331,13 @@ axios@1.5.0:
     follow-redirects "^1.15.0"
     form-data "^4.0.0"
     proxy-from-env "^1.1.0"
+
+axios@^0.25.0:
+  version "0.25.0"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-0.25.0.tgz#349cfbb31331a9b4453190791760a8d35b093e0a"
+  integrity sha512-cD8FOb0tRH3uuEe6+evtAbgJtfxr7ly3fQjYcMcuPlgkwVS9xboaVIpcDV+cYQe+yGykgwZCs1pzjntcGa6l5g==
+  dependencies:
+    follow-redirects "^1.14.7"
 
 babel-plugin-macros@^3.1.0:
   version "3.1.0"
@@ -4025,6 +4044,11 @@ follow-redirects@^1.0.0, follow-redirects@^1.15.0:
   version "1.15.2"
   resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.15.2.tgz#b460864144ba63f2681096f274c4e57026da2c13"
   integrity sha512-VQLG33o04KaQ8uYi2tVNbdrWp1QWxNNea+nmIB4EVM28v0hmP17z7aG1+wAkNzVq4KeXTq3221ye5qTJP91JwA==
+
+follow-redirects@^1.14.7:
+  version "1.15.3"
+  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.15.3.tgz#fe2f3ef2690afce7e82ed0b44db08165b207123a"
+  integrity sha512-1VzOtuEM8pC9SFU1E+8KfTjZyMztRsgEfwQl44z8A25uy13jSzTj6dyK2Df52iV0vgHCfBwLhDWevLn95w5v6Q==
 
 for-in@^1.0.1, for-in@^1.0.2:
   version "1.0.2"
@@ -6673,6 +6697,13 @@ postcss@^8.3.11, postcss@^8.4.21:
     picocolors "^1.0.0"
     source-map-js "^1.0.2"
 
+postmark@^2.7.8:
+  version "2.9.5"
+  resolved "https://registry.yarnpkg.com/postmark/-/postmark-2.9.5.tgz#d863f3cea6242c1531ace3c53756f706f32d3eeb"
+  integrity sha512-F27gc6wrxdn7GADodGpECoWez7FK2Pdach7A9ni5vVZiYz1YUY7T68nvVCzxrbWCjOS7ZujyclYlq1C0a4ar1w==
+  dependencies:
+    axios "^0.25.0"
+
 prebuild-install@^7.1.0, prebuild-install@^7.1.1:
   version "7.1.1"
   resolved "https://registry.yarnpkg.com/prebuild-install/-/prebuild-install-7.1.1.tgz#de97d5b34a70a0c81334fd24641f2a1702352e45"
@@ -7787,6 +7818,14 @@ std-env@^3.0.1:
   version "3.4.3"
   resolved "https://registry.yarnpkg.com/std-env/-/std-env-3.4.3.tgz#326f11db518db751c83fd58574f449b7c3060910"
   integrity sha512-f9aPhy8fYBuMN+sNfakZV18U39PbalgjXG3lLB9WkaYTxijru61wb57V9wxxNthXM5Sd88ETBWi29qLAsHO52Q==
+
+strapi-provider-email-postmark@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/strapi-provider-email-postmark/-/strapi-provider-email-postmark-4.0.1.tgz#a7f2e388b89f4b5a41ff42ecac5f269831a19402"
+  integrity sha512-BJiHvMtje7sHnArzfR7keW0GgMgEMokNqEedUVR9npovUG9lJGNZ8LbeOkcez5epkWvRqqdXJe6F2SKOqpamSw==
+  dependencies:
+    "@strapi/utils" "^4.0.0"
+    postmark "^2.7.8"
 
 stream-chain@2.2.5, stream-chain@^2.2.5:
   version "2.2.5"
